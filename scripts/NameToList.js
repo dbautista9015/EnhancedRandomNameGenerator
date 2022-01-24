@@ -7,4 +7,6 @@ export default function addName(name) {
 
     injectListItemHere.appendChild(li);
 
+    return li.textContent;
+
 }
