@@ -1,4 +1,4 @@
-let favorites = [];
+let favorites = CheckLocalStorage();
 
 
 function SaveToLocalStorage(personName) {
@@ -6,21 +6,26 @@ function SaveToLocalStorage(personName) {
     localStorage.setItem('Favorites', JSON.stringify(favorites));
 }
 
-function ConsoleLogStorage() {
-    const localStorageItem = localStorage.getItem('Favorites');
-
-    console.log(JSON.parse(localStorageItem));
-}
-
-function RemoveFromLocalStorage() {
-    favorites = [];
+function SaveToLocalStorage2() {
     localStorage.setItem('Favorites', JSON.stringify(favorites));
 }
 
+function CheckLocalStorage() {
+    const localStorageItem = localStorage.getItem('Favorites');
+
+    return JSON.parse(localStorageItem);
+}
+
+function RemoveFromLocalStorage(personName) {
+    let localStorageItemIndex = favorites.indexOf(personName)
+    favorites.splice(personName, 1);
+    SaveToLocalStorage2();
+}
 
 
 
 
-export {SaveToLocalStorage, ConsoleLogStorage, RemoveFromLocalStorage}
+
+export {SaveToLocalStorage, CheckLocalStorage, RemoveFromLocalStorage}
 
 
