@@ -16,6 +16,7 @@
     <title>Hello, world!</title>
   </head>
   <body>
+      <!--Title-->
     <div class="container-fluid">
       <div class="row">
         <div class="col-12 d-flex justify-content-center">
@@ -26,32 +27,52 @@
         </div>
       </div>
     </div>
+    <!--End Title-->
 
+    <!--Input Fields-->
     <div class="container-fluid">
       <div class="row">
 
+        <!--Name to list-->
+        <div class="col-12 d-flex justify-content-center">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Enter a name to add to list" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon1">To List</button>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Random</button>
+            </div>
+        </div>
+        <!--End Name to list-->
+
+        <!--# of people field-->
         <div class="col-12 d-flex justify-content-center">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Enter # of people per group " aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon3">Button</button>
             </div>
         </div>
+        <!--End # of people fields-->
+
+        <!--# of groups desired-->
         <div class="col-12 d-flex justify-content-center">
             <div class="input-group mb-3">
                 <input type="text" class="form-control" placeholder="Enter # of groups desired" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                <button class="btn btn-outline-secondary" type="button" id="button-addon4">Button</button>
             </div>
         </div>
+        <!--End # of groups desired-->
+
 
         <div class="col-12 d-flex justify-content-center" id="injectListHere">
-            
+
         </div>
 
         <div class="col-12 d-flex justify-content-center" id="injectGroupHere">
-            
+
         </div>
 
       </div>
+
+      <!--End Input Fields-->
     </div>
 
     <div class="container-fluid">
