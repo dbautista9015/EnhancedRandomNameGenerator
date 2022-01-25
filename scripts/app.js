@@ -7,6 +7,10 @@ let randomBtn = document.getElementById('button-addon2')
 
 let listItems = document.getElementById('injectListItemHere');
 
+let injectGroupHere = document.getElementById('injectGroupHere');
+
+
+
 
 
 
@@ -73,7 +77,17 @@ function StartProgram() {
 
 }
 
+function NumberOfPeoplePerGroup() {
+    let items = CheckLocalStorage();
+
+    if (items.length !== 0) {
+        
+    }
+}
+
 StartProgram();
+
+
 
 
 
