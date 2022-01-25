@@ -1,5 +1,6 @@
 import {addName, addName2} from "../scripts/NameToList.js"
 import {SaveToLocalStorage, CheckLocalStorage, RemoveFromLocalStorage} from "../scripts/localStorage.js"
+import MakeTable from "./createTable.js";
 
 let nameInput = document.getElementById("nameInput");
 let toListBtn = document.getElementById("button-addon1");
@@ -8,6 +9,11 @@ let randomBtn = document.getElementById('button-addon2')
 let listItems = document.getElementById('injectListItemHere');
 
 let injectGroupHere = document.getElementById('injectGroupHere');
+
+let numberOfPeople = document.getElementById('button-addon3');
+
+let numberOfGroups = document.getElementById('button-addon4');
+
 
 
 
@@ -62,6 +68,21 @@ randomBtn.addEventListener('click', e => {
     }
 })
 
+numberOfPeople.addEventListener('click', e => {
+
+    let items = CheckLocalStorage();
+    
+    if (items.length !== 0) {
+        if (numberOfPeople.value > 0 && numberOfPeople.value <= items.length) {
+            MakeTable(numberOfPeople.value)
+        } else {
+            alert('You entered an invalid number, try again!');
+        }
+        
+    }
+    
+})
+
 
 function StartProgram() {
     let items = CheckLocalStorage();
@@ -77,13 +98,7 @@ function StartProgram() {
 
 }
 
-function NumberOfPeoplePerGroup() {
-    let items = CheckLocalStorage();
 
-    if (items.length !== 0) {
-        
-    }
-}
 
 StartProgram();
 
